@@ -27,8 +27,9 @@
           <?php echo $genre->GenreId ?>
         </td>
         <td>
-          <a href="tracks.php?genre=<?php echo $genre->Name ?>">
-            <?php echo $genre->Name?>
+          <?php
+            echo '<a href="tracks.php?genre=', urlencode($genre->Name ), '">';
+              echo $genre->Name?>
           </a>
         </td>
       </tr>
